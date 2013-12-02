@@ -11,7 +11,7 @@ public class NoSQLDatabase {
 
     private static NoSQLDatabase instance;
 
-    public static NoSQLDatabase getInstance() throws UnknownHostException {
+    public static synchronized NoSQLDatabase getInstance() throws UnknownHostException {
         if (instance == null) {
             instance = new NoSQLDatabase();
         }
